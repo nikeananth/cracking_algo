@@ -1,3 +1,5 @@
+package com.kun.code;
+
 public class PrimeNumberTune {
 
     public static void main(String[] args) {

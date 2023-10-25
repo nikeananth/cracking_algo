@@ -1,3 +1,5 @@
+package com.kun.code;
+
 public class BonusCalculator {
 
     public static void main(String[] args) {
