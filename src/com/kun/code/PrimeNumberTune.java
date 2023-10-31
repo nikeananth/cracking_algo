@@ -21,3 +21,5 @@ public class PrimeNumberTune {
 
     }
 }
+
+//24- 2*12,3*8, 4*6,//reverse 4*6,,3*8,2*12

@@ -17,5 +17,20 @@ public class PrimeNumber {
         if(!flag) {
             System.out.println("prime no :-)");
         }
+
+        int num1=3;
+        int c1=2;
+        boolean fl=Boolean.FALSE;
+        while(c1<num){
+            if(num1%c1==0){
+                System.out.println("not prime no");
+                fl=Boolean.TRUE;
+                break;
+            }
+            c1++;
+        }
+        if(!flag){
+            System.out.println("prime no");
+        }
     }
 }
