@@ -1,9 +1,9 @@
-package com.kun.search;
+package com.kun.search1;
 
 public class FloorOfNumber {
     public static void main(String[] args) {
-         int arr[]={2,3,4,5,6,7,8,9,11,12};
-        int target=2;
+         int arr[]={1,2,4,5,6,7,8,9,11,12};
+        int target=3;
         int start=0;
         int end=arr.length-1;
         while(start<=end) {
@@ -18,6 +18,8 @@ public class FloorOfNumber {
                 end=mid-1;
             }
         }
+        System.out.println(end);
+        System.out.println(start);
         if(end<0) {
            System.out.println("floor does not exsit"+end);
         }

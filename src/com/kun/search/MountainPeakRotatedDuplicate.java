@@ -20,6 +20,7 @@ public class MountainPeakRotatedDuplicate {
                  return mid - 1;
              }
 
+             //222278912
              if(arr[mid]==arr[start] && arr[mid]==arr[end]){
                if(arr[start]>arr[start+1]){
                    return start;
@@ -30,7 +31,7 @@ public class MountainPeakRotatedDuplicate {
                  }
                  end--;
              }
-
+            //9999123
              if (arr[start] <= arr[mid]||(arr[start] ==arr[mid] && arr[mid]>arr[end])) {
                  start = mid + 1;
              } else {
