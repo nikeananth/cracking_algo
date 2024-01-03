@@ -31,6 +31,14 @@ public class MazeProblem {
                 {true,true,true,true}
         };
         System.out.println(countPathRiverDiagAll("",maze2,0,0));
+
+        int maze3[][]={
+                {0,0,0,0},
+                {0,0,0,0},
+                {0,0,0,0},
+                {0,0,0,0}
+        };
+        System.out.println(countPathRiverDiagAllStep("","",maze3,0,0,0));
     }
 
 
@@ -151,6 +159,35 @@ public class MazeProblem {
             count=count+countPathRiverDiagAll(p+"U",maze,c,r-1);
         }
         maze[r][c]=true;
+        return count;
+
+    }
+
+
+    static int countPathRiverDiagAllStep(String p,String s,int maze[][],int c,int r,int step){
+        if(maze.length-1==r&&c==maze[0].length-1){
+            System.out.println(p);
+            System.out.println(s);
+            return 1;
+        }
+        if(maze[r][c]!=0){
+            return 0;
+        }
+        maze[r][c]=step;
+        int count=0;
+        if(r< maze.length-1){
+            count=count+ countPathRiverDiagAllStep(p+"D",s+(step+1),maze,c,r+1,step+1);
+        }
+        if(c<maze[0].length-1){
+            count=count+ countPathRiverDiagAllStep(p+"R",s+(step+1),maze,c+1,r,step+1);
+        }
+        if(c>0){
+            count=count+countPathRiverDiagAllStep(p+"L",s+(step+1),maze,c-1,r,step+1);
+        }
+        if(r>0){
+            count=count+countPathRiverDiagAllStep(p+"U",s+(step+1),maze,c,r-1,step+1);
+        }
+        maze[r][c]=0;
         return count;
 
     }
